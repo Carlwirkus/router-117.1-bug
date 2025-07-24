@@ -52,7 +52,7 @@ const root = ReactDOM.createRoot(rootElement);
 root.render(
   <StrictMode>
     <div className="bg-red-500 h-screen">
-      <RouterProvider router={router} defaultPendingMs={0} defaultPendingComponent={() => <div className="bg-yellow-500 h-screen">loading..</div>}  />
+      <RouterProvider router={router} defaultPendingMs={0} defaultPendingComponent={() => <div className="bg-green-500 h-screen">loading..</div>}  />
     </div>
   </StrictMode>
 );
