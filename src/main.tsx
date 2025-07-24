@@ -29,8 +29,7 @@ const indexRoute = createRoute({
   ),
   path: "/",
   getParentRoute: () => rootRoute,
-  loader: async ({context}) => {
-    console.log(context);
+  loader: async () => {
     await sleep(2000);
   },
 })
@@ -39,11 +38,6 @@ const routeTree = rootRoute.addChildren([indexRoute]);
 
 const router = createRouter({
   routeTree,
-  defaultPreload: 'intent',
-  scrollRestoration: true,
-  context: {
-    foo: {}
-  }
 });
 
 declare module '@tanstack/react-router' {
